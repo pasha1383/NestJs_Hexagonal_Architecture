@@ -3,10 +3,7 @@ export class Username {
     private _value: string;
 
     constructor(name: string) {
-        if (!this.isValid(name)) {
-            throw new TypeError("name must be a valid string");
-        }
-        this._value = name;
+        this.setValue(name);
     }
 
     private isValid(value: string): boolean {
@@ -19,5 +16,12 @@ export class Username {
 
     equals(other : Username): boolean {
         return this._value === other.getValue();
+    }
+
+    setValue(name: string): void {
+        if (!this.isValid(name)) {
+            throw new TypeError("name must be a valid string");
+        }
+        this._value = name;
     }
 }
