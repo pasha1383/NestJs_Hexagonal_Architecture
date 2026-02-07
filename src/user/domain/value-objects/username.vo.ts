@@ -22,6 +22,6 @@ export class Username {
         if (this.isNotValid(name)) {
             throw new TypeError("name must be a valid string");
         }
-        this._value = name;
+        this._value = name.trim();
     }
 }
