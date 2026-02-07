@@ -6,8 +6,8 @@ export class Username {
         this.setValue(name);
     }
 
-    private isValid(value: string): boolean {
-        return value.trim().length > 0;
+    private isNotValid(value: string): boolean {
+        return !value || !(value.trim().length < 2);
     }
 
     getValue(): string {
@@ -19,7 +19,7 @@ export class Username {
     }
 
     setValue(name: string): void {
-        if (!this.isValid(name)) {
+        if (this.isNotValid(name)) {
             throw new TypeError("name must be a valid string");
         }
         this._value = name;

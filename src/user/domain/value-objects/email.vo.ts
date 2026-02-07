@@ -7,7 +7,7 @@ export class Email {
         this.setValue(value);
     }
 
-    private isValid(value: string) {
+    private isValid(value: string) : boolean {
         return this.emailRegex.test(value);
     }
 
@@ -15,7 +15,7 @@ export class Email {
         return this._value;
     }
 
-    equals(other: Email) {
+    equals(other: Email) : boolean {
         return this._value === other.getValue();
     }
 
