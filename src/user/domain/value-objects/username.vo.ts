@@ -16,4 +16,8 @@ export class Username {
     getValue(): string {
         return this._value;
     }
+
+    equals(other : Username): boolean {
+        return this._value === other.getValue();
+    }
 }

@@ -12,7 +12,7 @@ export class UserId {
     }
 
     equals(other : UserId) {
-        return this._value !== other.getValue();
+        return this._value === other.getValue();
     }
 
 
